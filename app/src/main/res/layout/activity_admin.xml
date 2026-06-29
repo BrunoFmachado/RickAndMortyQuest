@@ -1,0 +1,39 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/background_dark" android:fillViewport="true" android:clipToPadding="false">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="760dp" android:orientation="vertical" android:padding="24dp">
+        <TextView style="@style/CyberTag" android:layout_width="wrap_content" android:text="SYS ADMIN"/>
+        <TextView android:id="@+id/titleTextView" style="@style/TextCyberTitle" android:layout_marginTop="16dp" android:text="Olá, Administrador"/>
+        <TextView android:id="@+id/emailTextView" style="@style/TextCyberSubtitle" android:layout_marginTop="4dp" android:textColor="@color/accent_cyan" android:text="admin@empresa.com"/>
+        <TextView android:id="@+id/subtitleTextView" style="@style/TextCyberSubtitle" android:layout_marginTop="14dp" android:text="Selecione um módulo para começar."/>
+        <LinearLayout android:id="@+id/statusStrip" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="22dp" android:gravity="center_vertical" android:orientation="horizontal">
+            <TextView style="@style/CyberTag" android:text="OKHTTP3"/>
+            <TextView style="@style/CyberTag" android:layout_marginStart="8dp" android:text="MVVM"/>
+            <TextView style="@style/CyberTag" android:layout_marginStart="8dp" android:text="GRAILS"/>
+        </LinearLayout>
+        <!--  Card do módulo Personagens (API Rick and Morty)  -->
+        <com.google.android.material.card.MaterialCardView android:id="@+id/charactersCard" style="@style/CardAppGlass" android:layout_width="match_parent" android:layout_height="168dp" android:layout_marginTop="30dp" android:clickable="true" android:focusable="true" android:foreground="?attr/selectableItemBackground">
+            <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="match_parent" android:padding="20dp">
+                <TextView android:id="@+id/iconChar" android:layout_width="64dp" android:layout_height="64dp" android:background="@drawable/bg_icon_avatar_cyan" android:gravity="center" android:text="R" android:textColor="@color/accent_cyan" android:textSize="26sp" android:textStyle="bold" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"/>
+                <TextView android:id="@+id/titleChar" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="18dp" android:text="Personagens" android:textColor="@color/text_primary" android:textSize="20sp" android:textStyle="bold" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/iconChar" app:layout_constraintTop_toTopOf="@id/iconChar"/>
+                <TextView android:id="@+id/descChar" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="18dp" android:layout_marginTop="6dp" android:text="Catálogo da API Rick and Morty, com filtros e atualização de foto." android:textColor="@color/text_secondary" android:textSize="13sp" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/iconChar" app:layout_constraintTop_toBottomOf="@id/titleChar"/>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="18dp" android:layout_marginTop="10dp" android:orientation="horizontal" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/iconChar" app:layout_constraintTop_toBottomOf="@id/descChar">
+                    <TextView style="@style/CyberTag" android:text="PAGINAÇÃO" android:textSize="9sp"/>
+                    <TextView style="@style/CyberTag" android:layout_marginStart="8dp" android:text="CÂMERA" android:textSize="9sp"/>
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <!--  Card do módulo Funcionários (Grails + MySQL)  -->
+        <com.google.android.material.card.MaterialCardView android:id="@+id/employeesCard" style="@style/CardAppGlass" android:layout_width="match_parent" android:layout_height="168dp" android:layout_marginTop="18dp" android:clickable="true" android:focusable="true" android:foreground="?attr/selectableItemBackground">
+            <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="match_parent" android:padding="20dp">
+                <TextView android:id="@+id/iconEmployee" android:layout_width="64dp" android:layout_height="64dp" android:background="@drawable/bg_icon_avatar_violet" android:gravity="center" android:text="E" android:textColor="@color/app_secondary" android:textSize="26sp" android:textStyle="bold" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"/>
+                <TextView android:id="@+id/titleEmployee" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="18dp" android:text="Funcionários" android:textColor="@color/text_primary" android:textSize="20sp" android:textStyle="bold" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/iconEmployee" app:layout_constraintTop_toTopOf="@id/iconEmployee"/>
+                <TextView android:id="@+id/descEmployee" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="18dp" android:layout_marginTop="6dp" android:text="Backend Grails local, persistência MySQL e CRUD completo." android:textColor="@color/text_secondary" android:textSize="13sp" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/iconEmployee" app:layout_constraintTop_toBottomOf="@id/titleEmployee"/>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="18dp" android:layout_marginTop="10dp" android:orientation="horizontal" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/iconEmployee" app:layout_constraintTop_toBottomOf="@id/descEmployee">
+                    <TextView style="@style/CyberTag" android:text="MYSQL" android:textSize="9sp"/>
+                    <TextView style="@style/CyberTag" android:layout_marginStart="8dp" android:text="REST" android:textSize="9sp"/>
+                    <TextView style="@style/CyberTag" android:layout_marginStart="8dp" android:text="CRUD" android:textSize="9sp"/>
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.button.MaterialButton android:id="@+id/logoutButton" style="@style/ButtonAppSecondary" android:layout_width="match_parent" android:layout_marginTop="28dp" android:text="@string/menu_logout" android:textColor="@color/error" app:strokeColor="@color/error"/>
+    </LinearLayout>
+</ScrollView>
