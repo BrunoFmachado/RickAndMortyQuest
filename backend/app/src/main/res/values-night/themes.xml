@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.RickAndMortyQuest" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#12D8FA</item>
+        <item name="colorPrimaryVariant">#061728</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+
+        <item name="colorSecondary">#78F542</item>
+        <item name="colorOnSecondary">#061728</item>
+
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+
+        <item name="android:windowBackground">@color/background_dark</item>
+        <item name="android:statusBarColor">#061728</item>
+        <item name="android:navigationBarColor">#061728</item>
+
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+    </style>
+
+    <style name="Widget.RickAndMortyQuest.Button" parent="Widget.MaterialComponents.Button">
+        <item name="android:minHeight">56dp</item>
+        <item name="cornerRadius">18dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">sans</item>
+        <item name="backgroundTint">@color/app_secondary</item>
+        <item name="android:textColor">@color/text_on_dark</item>
+    </style>
+
+    <style name="Widget.RickAndMortyQuest.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxCornerRadiusTopStart">16dp</item>
+        <item name="boxCornerRadiusTopEnd">16dp</item>
+        <item name="boxCornerRadiusBottomStart">16dp</item>
+        <item name="boxCornerRadiusBottomEnd">16dp</item>
+        <item name="boxStrokeColor">@color/app_secondary</item>
+        <item name="hintTextColor">@color/text_secondary</item>
+    </style>
+
+</resources>
